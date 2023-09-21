@@ -34,8 +34,9 @@ namespace StudentProject.Models
         }
 
         public string HungarianFullName => $"{LastName} {FirstName}";
-        public string HungarianBirthsDay => $"{String.Format("{0:yyyy.MM.dd.}")}";
-        public string HungarianLongBirthsDay => $"{String.Format("{0:yyyy.MM.dd. dddd}")}";
+        public string HungarianBirthsDay => BirthsDay.ToString("yyyy.MM.dd.");
+        public string HungarianLongBirthsDay => BirthsDay.ToString("yyyy.MM.dd. dddd");
+
         public string SchoolYearAndClass {
             get
             {

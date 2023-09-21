@@ -12,10 +12,9 @@
               >
         <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="model:Student">
-                <Frame>
+                <Frame Margin="5">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
@@ -27,7 +26,7 @@
                         </Grid.ColumnDefinitions>
                         <Image Grid.Column="0" WidthRequest="64" Grid.RowSpan="4" Source="student.png"/>
                         <Label Grid.Row="0" Grid.Column="1" Text="{Binding HungarianFullName}" />
-                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding BirthsDay}" />
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding HungarianLongBirthsDay}" />
                         <Label Grid.Row="2" Grid.Column="1" Text="{Binding SchoolYearAndClass}" />
                         <Label Grid.Row="3" Grid.Column="1" Text="{Binding EducationLevel}" />
                     </Grid>
