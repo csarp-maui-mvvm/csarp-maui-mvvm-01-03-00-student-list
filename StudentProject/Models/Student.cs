@@ -53,9 +53,11 @@ namespace StudentProject.Models
             }
         }
 
+        public string AllProperty => $"{LastName} {FirstName} ({SchoolYearAndClass}) \n{HungarianBirthsDay}\n{EducationLevel}";
+
         public override string ToString()
         {
-            return $"{LastName} {FirstName} ({SchoolYearAndClass}) \n({String.Format("{0:yyyy.MM.dd.}", BirthsDay)})\n({EducationLevel})";
+            return AllProperty;
         }
     }
 }

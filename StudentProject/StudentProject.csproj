@@ -49,7 +49,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Icon\student.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Icon\student.png" />
 	</ItemGroup>
 
 </Project>

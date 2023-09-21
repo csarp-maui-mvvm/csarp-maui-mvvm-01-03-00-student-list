@@ -7,21 +7,17 @@
     <ContentPage.BindingContext>
         <viewmodle:StudentViewModel/>
     </ContentPage.BindingContext>
-    <ListView BackgroundColor="Transparent"
+    <CollectionView BackgroundColor="Transparent"
               ItemsSource="{Binding Students}"
               >
-        <ListView.ItemTemplate>
+        <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="model:Student">
-                <ViewCell>
-                    <Grid Padding="10">
                         <Frame>
                             <StackLayout>
-                                <Label Text="{Binding}" />
+                                <Label Text="{Binding HungarianFullName}" />
                             </StackLayout>
                         </Frame>
-                    </Grid>
-                </ViewCell>
             </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentPage>
