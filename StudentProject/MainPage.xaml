@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodle="clr-namespace:StudentProject.ViewModels"
+             xmlns:model="clr-namespace:StudentProject.Models"
              x:Class="StudentProject.MainPage">
     <ContentPage.BindingContext>
         <viewmodle:StudentViewModel/>
@@ -9,6 +10,20 @@
     <ListView BackgroundColor="Transparent"
               ItemsSource="{Binding Students}"
               >
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="model:Student">
+                <ViewCell>
+                    <Grid>
+                        <Frame>
+                            <StackLayout>
+                                <Label Text="{Binding LastName}" />
+                                <Label Text="{Binding FirstName}" />
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
         
     </ListView>
 </ContentPage>

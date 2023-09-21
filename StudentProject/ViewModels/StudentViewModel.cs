@@ -31,6 +31,8 @@ namespace StudentProject.ViewModels
         public StudentViewModel()
         {
             Students.Add(new Student("Elek", "Teszt", System.DateTime.Now, 9, SchoolClassType.ClassA, ""));
+            Students.Add(new Student("János", "Teszt", System.DateTime.Now, 10, SchoolClassType.ClassB , ""));
+            Students.Add(new Student("Teréz", "Teszt", System.DateTime.Now, 11, SchoolClassType.ClassC, ""));
             SelectedStudent = new Student();
             SelectedEducationLevel=_educationLevels.ElementAt(0);
         }
