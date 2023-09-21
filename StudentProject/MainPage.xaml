@@ -13,17 +13,15 @@
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="model:Student">
                 <ViewCell>
-                    <Grid>
+                    <Grid Padding="10">
                         <Frame>
                             <StackLayout>
-                                <Label Text="{Binding LastName}" />
-                                <Label Text="{Binding FirstName}" />
+                                <Label Text="{Binding}" />
                             </StackLayout>
                         </Frame>
                     </Grid>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
-        
     </ListView>
 </ContentPage>

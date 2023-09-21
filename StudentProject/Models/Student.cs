@@ -33,9 +33,29 @@ namespace StudentProject.Models
             EducationLevel = string.Empty;
         }
 
+        public string HungarianFullName => $"{LastName} {FirstName}";
+        public string HungarianBirthsDay => $"{String.Format("{0:yyyy.MM.dd.}")}";
+        public string HungarianLongBirthsDay => $"{String.Format("{0:yyyy.MM.dd. dddd}")}";
+        public string SchoolYearAndClass {
+            get
+            {
+                string schoolClassName = string.Empty;
+                switch (SchoolClass)
+                {
+                    case SchoolClassType.ClassA: schoolClassName = "a";break;
+                    case SchoolClassType.ClassB: schoolClassName = "b";break;
+                    case SchoolClassType.ClassC: schoolClassName = "c";break;
+                }
+                if (schoolClassName != string.Empty)
+                    return $"{SchoolYear}.{schoolClassName}";
+                else
+                    return $"{SchoolYear} évfolyam";
+            }
+        }
+
         public override string ToString()
         {
-            return $"{LastName} {FirstName} ({SchoolYear}.{SchoolClass}) - ({String.Format("{0:yyyy.MM.dd.}", BirthsDay)}) ({EducationLevel})";
+            return $"{LastName} {FirstName} ({SchoolYearAndClass}) \n({String.Format("{0:yyyy.MM.dd.}", BirthsDay)})\n({EducationLevel})";
         }
     }
 }
